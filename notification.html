@@ -1,0 +1,548 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="msapplication-TileColor" content="#ffffff" />
+  <meta name="theme-color" content="#ffffff" />
+  <title>Notification
+Page</title>
+  <link rel="stylesheet" type="text/css" href="./assets/css/style.css" />
+  <!-- Flatpickr Date Picker -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/afe7e62084.js" crossorigin="anonymous"></script>
+  <!-- Trix Text Editor -->
+  <link rel="stylesheet" type="text/css" href="./assets/library/trix/trix.css" />
+  <script type="text/javascript" src="./assets/library/trix/trix.js"></script>
+</head>
+
+  <body>
+    <main class="bd-main vh-100">
+      <div class="bg-skew"></div>
+       
+<nav class="navbar navbar-light border-bottom border-secondary fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="home.html">Kohapp</a>
+    <a role="button" class="ms-auto me-6"><i class="fas fa-search fs-4"></i></a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="offcanvas"
+      data-bs-target="#offcanvasRight"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  </div>
+</nav>
+<div
+  class="offcanvas offcanvas-end bg-dark text-white"
+  tabindex="-1"
+  id="offcanvasRight"
+  aria-labelledby="offcanvasRightLabel"
+>
+  <div class="container sidebar">
+    <div class="offcanvas-header border-bottom px-0 pt-7 pb-4">
+      <button
+        type="button"
+        class="btn-close btn-close-white ms-auto fs-4"
+        data-bs-dismiss="offcanvas"
+        aria-label="Close"
+      ></button>
+    </div>
+    <div class="offcanvas-body">
+      <div class="d-flex mt-7">
+        <div class="col d-none d-sm-block">
+          <h3 class="fs-4 fs-md-2 mb-4">Kohapp</h3>
+          <p>
+            Supporting users to digitally create, <br />
+            donate, collect and record <br />
+            donations.
+          </p>
+        </div>
+        <div class="col-auto d-flex flex-column gap-6">
+          <h3 class="fs-2">Menu</h3>
+          <a href="myevent.html"><i class="fas fa-file-alt me-2"></i>My Event</a>
+          <a href="myprofile.html"><i class="fas fa-user-alt me-2"></i>My Profile</a>
+          <a href="mydonation.html"><i class="fas fa-book me-2"></i>My Donation</a>
+          <a href="akahu-account.html"><i class="fas fa-user-gear me-2"></i>Akahu Account</a>
+          <a role="button" href="signin.html" class="btn btn-primary mt-3">Sign In</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container box-content">
+  <h1 class="page-title my-7 text-center">Notification</h1>
+  <ul class="nav nav-tabs" id="myTab" role="tablist">
+    <li class="nav-item" role="presentation">
+      <button
+        class="nav-link active"
+        id="all-notif-tab"
+        data-bs-toggle="tab"
+        data-bs-target="#all-notif"
+        type="button"
+        role="tab"
+        aria-controls="all-notif"
+        aria-selected="true"
+      >
+        All
+      </button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button
+        class="nav-link"
+        id="unread-notif-tab"
+        data-bs-toggle="tab"
+        data-bs-target="#unread-notif"
+        type="button"
+        role="tab"
+        aria-controls="unread-notif"
+        aria-selected="false"
+      >
+        Unread
+      </button>
+    </li>
+  </ul>
+  <div class="tab-content">
+    <div class="tab-pane fade show active" id="all-notif" role="tabpanel" aria-labelledby="all-notification-tab" >
+      
+<div class="notification">
+  <div class="col-auto">
+    <div class="notification-avatar">Z</div>
+  </div>
+  <div class="col me-sm-7">
+    <h5 class="fs-5">Mirjan Prenga<span class="d-inline-block rounded-circle icon-xs bg-primary4 ms-2"></span></h5>
+    <p class="text-secondary mb-3">Give donation 15.00</p>
+    <p class="fs-7">
+      Maringi noa ngā roimata ki a koutou te whānau pani Me tears flow freely for you all at this time.
+    </p>
+  </div>
+  <div class="col-auto text-end">
+    <p class="fs-6 text-secondary">1 hour ago</p>
+    <a role="button" data-bs-toggle="dropdown" aria-expanded="false">
+      <i class="fas fa-ellipsis-h fs-4"></i>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-dark dropdown-menu-end">
+      <li>
+        <a class="dropdown-item" href="#">
+          <div class="d-flex gap-2">
+            <div class="col-auto">
+              <i class="fas fa-check fs-5"></i>
+            </div>
+            <div class="col">
+              <p class="mb-0">Mark as read</p>
+              <p class="fs-7">Mark this notification read</p>
+            </div>
+          </div>
+        </a>
+      </li>
+      <li>
+        <a class="dropdown-item" href="#">
+          <div class="d-flex gap-2">
+            <div class="col-auto">
+              <i class="fas fa-trash-alt fs-6"></i>
+            </div>
+            <div class="col">
+              <p class="mb-0">Delete</p>
+              <p class="fs-7">Remove this notification</p>
+            </div>
+          </div>
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
+ 
+<div class="notification">
+  <div class="col-auto">
+    <div class="notification-avatar">Z</div>
+  </div>
+  <div class="col me-sm-7">
+    <h5 class="fs-5">Mirjan Prenga<span class="d-inline-block rounded-circle icon-xs bg-primary4 ms-2"></span></h5>
+    <p class="text-secondary mb-3">Give donation 15.00</p>
+    <p class="fs-7">
+      Maringi noa ngā roimata ki a koutou te whānau pani Me tears flow freely for you all at this time.
+    </p>
+  </div>
+  <div class="col-auto text-end">
+    <p class="fs-6 text-secondary">1 hour ago</p>
+    <a role="button" data-bs-toggle="dropdown" aria-expanded="false">
+      <i class="fas fa-ellipsis-h fs-4"></i>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-dark dropdown-menu-end">
+      <li>
+        <a class="dropdown-item" href="#">
+          <div class="d-flex gap-2">
+            <div class="col-auto">
+              <i class="fas fa-check fs-5"></i>
+            </div>
+            <div class="col">
+              <p class="mb-0">Mark as read</p>
+              <p class="fs-7">Mark this notification read</p>
+            </div>
+          </div>
+        </a>
+      </li>
+      <li>
+        <a class="dropdown-item" href="#">
+          <div class="d-flex gap-2">
+            <div class="col-auto">
+              <i class="fas fa-trash-alt fs-6"></i>
+            </div>
+            <div class="col">
+              <p class="mb-0">Delete</p>
+              <p class="fs-7">Remove this notification</p>
+            </div>
+          </div>
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
+ 
+<div class="notification align-items-center">
+    <div class="col fs-5">Notification removed</div>
+    <a role="button" class="btn-cancel col-auto fs-6 lh-1"><i class="fas fa-rotate-left me-2"></i>Cancel</a>
+</div>
+ 
+<div class="notification">
+  <div class="col-auto">
+    <div class="notification-avatar">Z</div>
+  </div>
+  <div class="col me-sm-7">
+    <h5 class="fs-5">Mirjan Prenga<span class="d-inline-block rounded-circle icon-xs bg-primary4 ms-2"></span></h5>
+    <p class="text-secondary mb-3">Give donation 15.00</p>
+    <p class="fs-7">
+      Maringi noa ngā roimata ki a koutou te whānau pani Me tears flow freely for you all at this time.
+    </p>
+  </div>
+  <div class="col-auto text-end">
+    <p class="fs-6 text-secondary">1 hour ago</p>
+    <a role="button" data-bs-toggle="dropdown" aria-expanded="false">
+      <i class="fas fa-ellipsis-h fs-4"></i>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-dark dropdown-menu-end">
+      <li>
+        <a class="dropdown-item" href="#">
+          <div class="d-flex gap-2">
+            <div class="col-auto">
+              <i class="fas fa-check fs-5"></i>
+            </div>
+            <div class="col">
+              <p class="mb-0">Mark as read</p>
+              <p class="fs-7">Mark this notification read</p>
+            </div>
+          </div>
+        </a>
+      </li>
+      <li>
+        <a class="dropdown-item" href="#">
+          <div class="d-flex gap-2">
+            <div class="col-auto">
+              <i class="fas fa-trash-alt fs-6"></i>
+            </div>
+            <div class="col">
+              <p class="mb-0">Delete</p>
+              <p class="fs-7">Remove this notification</p>
+            </div>
+          </div>
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
+ 
+<div class="notification">
+  <div class="col-auto">
+    <div class="notification-avatar">Z</div>
+  </div>
+  <div class="col me-sm-7 text-secondary">
+    <h5 class="fs-5">Mirjan Prenga</h5>
+    <p class="text-secondary mb-3">Give donation 15.00</p>
+    <p class="fs-7">
+      Maringi noa ngā roimata ki a koutou te whānau pani Me tears flow freely for you all at this time.
+    </p>
+  </div>
+  <div class="col-auto text-end">
+    <p class="fs-6 text-secondary">1 hour ago</p>
+    <a role="button" class="" data-bs-toggle="dropdown" aria-expanded="false">
+      <i class="fas fa-ellipsis-h fs-4"></i>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-dark dropdown-menu-end">
+      <li>
+        <a class="dropdown-item" href="#">
+          <div class="d-flex gap-2">
+            <div class="col-auto">
+              <i class="fas fa-check fs-5"></i>
+            </div>
+            <div class="col">
+              <p class="mb-0">Mark as read</p>
+              <p class="fs-7">Mark this notification read</p>
+            </div>
+          </div>
+        </a>
+      </li>
+      <li>
+        <a class="dropdown-item" href="#">
+          <div class="d-flex gap-2">
+            <div class="col-auto">
+              <i class="fas fa-trash-alt fs-6"></i>
+            </div>
+            <div class="col">
+              <p class="mb-0">Delete</p>
+              <p class="fs-7">Remove this notification</p>
+            </div>
+          </div>
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+    </div>
+    <div class="tab-pane fade" id="unread-notif" role="tabpanel" aria-labelledby="unread-notification-tab">
+        
+<div class="notification">
+  <div class="col-auto">
+    <div class="notification-avatar">Z</div>
+  </div>
+  <div class="col me-sm-7">
+    <h5 class="fs-5">Mirjan Prenga<span class="d-inline-block rounded-circle icon-xs bg-primary4 ms-2"></span></h5>
+    <p class="text-secondary mb-3">Give donation 15.00</p>
+    <p class="fs-7">
+      Maringi noa ngā roimata ki a koutou te whānau pani Me tears flow freely for you all at this time.
+    </p>
+  </div>
+  <div class="col-auto text-end">
+    <p class="fs-6 text-secondary">1 hour ago</p>
+    <a role="button" data-bs-toggle="dropdown" aria-expanded="false">
+      <i class="fas fa-ellipsis-h fs-4"></i>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-dark dropdown-menu-end">
+      <li>
+        <a class="dropdown-item" href="#">
+          <div class="d-flex gap-2">
+            <div class="col-auto">
+              <i class="fas fa-check fs-5"></i>
+            </div>
+            <div class="col">
+              <p class="mb-0">Mark as read</p>
+              <p class="fs-7">Mark this notification read</p>
+            </div>
+          </div>
+        </a>
+      </li>
+      <li>
+        <a class="dropdown-item" href="#">
+          <div class="d-flex gap-2">
+            <div class="col-auto">
+              <i class="fas fa-trash-alt fs-6"></i>
+            </div>
+            <div class="col">
+              <p class="mb-0">Delete</p>
+              <p class="fs-7">Remove this notification</p>
+            </div>
+          </div>
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
+ 
+<div class="notification">
+  <div class="col-auto">
+    <div class="notification-avatar">Z</div>
+  </div>
+  <div class="col me-sm-7">
+    <h5 class="fs-5">Mirjan Prenga<span class="d-inline-block rounded-circle icon-xs bg-primary4 ms-2"></span></h5>
+    <p class="text-secondary mb-3">Give donation 15.00</p>
+    <p class="fs-7">
+      Maringi noa ngā roimata ki a koutou te whānau pani Me tears flow freely for you all at this time.
+    </p>
+  </div>
+  <div class="col-auto text-end">
+    <p class="fs-6 text-secondary">1 hour ago</p>
+    <a role="button" data-bs-toggle="dropdown" aria-expanded="false">
+      <i class="fas fa-ellipsis-h fs-4"></i>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-dark dropdown-menu-end">
+      <li>
+        <a class="dropdown-item" href="#">
+          <div class="d-flex gap-2">
+            <div class="col-auto">
+              <i class="fas fa-check fs-5"></i>
+            </div>
+            <div class="col">
+              <p class="mb-0">Mark as read</p>
+              <p class="fs-7">Mark this notification read</p>
+            </div>
+          </div>
+        </a>
+      </li>
+      <li>
+        <a class="dropdown-item" href="#">
+          <div class="d-flex gap-2">
+            <div class="col-auto">
+              <i class="fas fa-trash-alt fs-6"></i>
+            </div>
+            <div class="col">
+              <p class="mb-0">Delete</p>
+              <p class="fs-7">Remove this notification</p>
+            </div>
+          </div>
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
+ 
+<div class="notification">
+  <div class="col-auto">
+    <div class="notification-avatar">Z</div>
+  </div>
+  <div class="col me-sm-7">
+    <h5 class="fs-5">Mirjan Prenga<span class="d-inline-block rounded-circle icon-xs bg-primary4 ms-2"></span></h5>
+    <p class="text-secondary mb-3">Give donation 15.00</p>
+    <p class="fs-7">
+      Maringi noa ngā roimata ki a koutou te whānau pani Me tears flow freely for you all at this time.
+    </p>
+  </div>
+  <div class="col-auto text-end">
+    <p class="fs-6 text-secondary">1 hour ago</p>
+    <a role="button" data-bs-toggle="dropdown" aria-expanded="false">
+      <i class="fas fa-ellipsis-h fs-4"></i>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-dark dropdown-menu-end">
+      <li>
+        <a class="dropdown-item" href="#">
+          <div class="d-flex gap-2">
+            <div class="col-auto">
+              <i class="fas fa-check fs-5"></i>
+            </div>
+            <div class="col">
+              <p class="mb-0">Mark as read</p>
+              <p class="fs-7">Mark this notification read</p>
+            </div>
+          </div>
+        </a>
+      </li>
+      <li>
+        <a class="dropdown-item" href="#">
+          <div class="d-flex gap-2">
+            <div class="col-auto">
+              <i class="fas fa-trash-alt fs-6"></i>
+            </div>
+            <div class="col">
+              <p class="mb-0">Delete</p>
+              <p class="fs-7">Remove this notification</p>
+            </div>
+          </div>
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+    </div>
+  </div>
+  <div class="text-center mt-7">
+    <img src="./assets/images/image-no-notification.webp" alt="no notification images">
+    <h6 class=" fs-6 mt-5">No notifications at this time</h6>
+  </div>
+</div>
+ 
+<div class="box-bottom-navigation">
+  <div class="container">
+    <div class="d-flex justify-content-between">
+      <a href="home.html" class="navigation-item">
+        <i class="fas fa-home mb-2 fs-4"></i>
+        <h6 class="h6">Home</h6>
+      </a>
+      <a href="event.html" class="navigation-item">
+        <i class="fas fa-location-dot mb-2 fs-4"></i>
+        <h6 class="h6">Events</h6>
+      </a>
+      <a href="collect.html" class="navigation-item">
+        <i class="fas fa-arrow-right-arrow-left mb-2 fs-4"></i>
+        <h6 class="h6">Collect</h6>
+      </a>
+      <a href="notification.html" class="navigation-item position-relative">
+        <div class="position-absolute start-50 ms-2 top-0 translate-middle bg-primary text-dark rounded-circle icon icon-md fs-7 lh-1">4</div>
+        <i class="fas fa-bell mb-2 fs-4"></i>
+        <h6 class="h6">Alerts</h6>
+      </a>
+    </div>
+  </div>
+</div>
+
+    </main>
+      <script
+  src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.slim.min.js"
+  integrity="sha512-6ORWJX/LrnSjBzwefdNUyLCMTIsGoNP6NftMy2UAm1JBm6PRZCO1d7OHBStWpVFZLO+RerTvqX/Z9mBFfCJZ4A=="
+  crossorigin="anonymous"
+  referrerpolicy="no-referrer"
+></script>
+ 
+<script>
+  $(document).ready(function () {
+    $('.navigation-item > h6:contains("Alerts")').parent().addClass('active');
+  });
+</script>
+
+    <script>
+      $(document).ready(function () {
+        $('.show-password').click(function () {
+          if ($(this).children().hasClass('fa-eye')) {
+            //change icon
+            $(this).children().removeClass('fa-eye').addClass('fa-eye-slash');
+            //change inputt type to text
+            $(this).closest('.position-relative').find('.form-control').attr('type', 'text');
+          } else {
+            //change icon
+            $(this).children().removeClass('fa-eye-slash').addClass('fa-eye');
+            //change inputt type to text
+            $(this).closest('.position-relative').find('.form-control').attr('type', 'password');
+          }
+        });
+      });
+
+      $(document).scroll(function () {
+        let $nav = $('.navbar.fixed-top');
+        $nav.toggleClass('scrolled', $(document).scrollTop() > $nav.height());
+        console.log('scroll position: ', $(document).scrollTop() )
+        console.log('height: ', $nav.height() )
+      });
+      // Example starter JavaScript for disabling form submissions if there are invalid fields
+      (function () {
+        'use strict';
+
+        // Fetch all the forms we want to apply custom Bootstrap validation styles to
+        var forms = document.querySelectorAll('.needs-validation');
+
+        // Loop over them and prevent submission
+        Array.prototype.slice.call(forms).forEach(function (form) {
+          form.addEventListener(
+            'submit',
+            function (event) {
+              if (!form.checkValidity()) {
+                event.preventDefault();
+                event.stopPropagation();
+              }
+
+              form.classList.add('was-validated');
+            },
+            false
+          );
+        });
+      })();
+    </script>
+  </body>
+</html>

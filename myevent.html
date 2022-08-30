@@ -1,0 +1,321 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="msapplication-TileColor" content="#ffffff" />
+  <meta name="theme-color" content="#ffffff" />
+  <title>Event Page</title>
+  <link rel="stylesheet" type="text/css" href="./assets/css/style.css" />
+  <!-- Flatpickr Date Picker -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/afe7e62084.js" crossorigin="anonymous"></script>
+  <!-- Trix Text Editor -->
+  <link rel="stylesheet" type="text/css" href="./assets/library/trix/trix.css" />
+  <script type="text/javascript" src="./assets/library/trix/trix.js"></script>
+</head>
+
+  <body>
+    <main class="bd-main vh-100">
+      <div class="bg-skew"></div>
+       
+<nav class="navbar navbar-light border-bottom border-secondary fixed-top">
+  <div class="container gap-3 gap-md-5 gap-xl-6">
+    <a href="home.html" class="fs-3"><i class="fas fa-arrow-left"></i></a>
+    <h1 class="navbar-brand text-center col">My Event</h1>
+  </div>
+</nav>
+
+<div class="container box-content">
+  <ul class="nav nav-tabs mt-7" id="myTab" role="tablist">
+    <li class="nav-item" role="presentation">
+      <button
+        class="nav-link active"
+        id="all-event-tab"
+        data-bs-toggle="tab"
+        data-bs-target="#all-event"
+        type="button"
+        role="tab"
+        aria-controls="all-event"
+        aria-selected="true"
+      >
+        All Event
+      </button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button
+        class="nav-link"
+        id="draft-tab"
+        data-bs-toggle="tab"
+        data-bs-target="#draft"
+        type="button"
+        role="tab"
+        aria-controls="draft"
+        aria-selected="false"
+      >
+        Draft(1)
+      </button>
+    </li>
+    <li class="d-none d-md-block nav-item ms-auto" role="presentation">
+      <a
+        class="nav-link active"
+        role="button"
+        href="create-event.html"
+      >
+      <i class="fas fa-plus"></i> Create Event
+      </a>
+    </li>
+  </ul>
+  <div class="tab-content">
+    <div class="tab-pane fade show active" id="all-event" role="tabpanel" aria-labelledby="all-event-tab">
+      <div class="mt-3">
+<div class="alert alert-success alert-dismissible fade show " role="alert">
+  <i class="fas fa-check-circle me-1"></i>
+  1 event successfully deleted
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+</div>
+      
+<div class="d-flex flex-column-reverse flex-lg-row border-bottom border-dark mt-6 gap-4">
+  <div class="col">
+    <h5 class="fs-5 mb-3">Tangihanga</h5>
+    <h3 class="fs-3 mb-4">William Berghan</h3>
+    <div class="d-flex align-items-center mb-4">
+      <h6 class="fs-6"><i class="fas fa-tag me-1"></i>Event</h6>
+      <div class="badge rounded-pill bg-success ms-2">Success</div>
+    </div>
+    <div class="row g-3 mb-6">
+      <div class="col-auto">
+        <h5 class="fs-5">$31,840<span class="fs-6 text-secondary ms-1">collected</span></h5>
+      </div>
+      <div class="col">
+        <h5 class="fs-5">10<span class="fs-6 text-secondary ms-1">donations</span></h5>
+      </div>
+    </div>
+    <div class="mb-4">
+      <a role="button" href="myevent-manage.html" class="fw-semibold"
+        ><i class="fas fa-bars-progress me-1"></i>Manage</a
+      >
+      <a role="button" href="edit-event.html" class="fw-semibold ms-3"><i class="fas fa-pen-to-square me-1"></i>Edit</a>
+    </div>
+  </div>
+  <div class="col-auto">
+    <img src="./assets/images/picture-1.webp" class="box-image-event" alt="profile" />
+  </div>
+</div>
+
+      
+<div class="d-flex flex-column-reverse flex-lg-row border-bottom border-dark mt-6 gap-4">
+  <div class="col">
+    <h5 class="fs-5 mb-3">Tangihanga</h5>
+    <h3 class="fs-3 mb-4">Wade Warren</h3>
+    <div class="d-flex align-items-center mb-4">
+      <h6 class="fs-6"><i class="fas fa-tag me-1"></i>Event</h6>
+      <div class="badge rounded-pill bg-info ms-2">Pending</div>
+    </div>
+    <div class="row g-3 mb-6">
+      <div class="col-auto">
+        <h5 class="fs-5">$31,840<span class="fs-6 text-secondary ms-1">collected</span></h5>
+      </div>
+      <div class="col">
+        <h5 class="fs-5">10<span class="fs-6 text-secondary ms-1">donations</span></h5>
+      </div>
+    </div>
+    <div class="mb-4">
+      <a role="button" href="myevent-manage.html" class="fw-semibold"
+        ><i class="fas fa-bars-progress me-1"></i>Manage</a
+      >
+      <a role="button" href="edit-event.html" class="fw-semibold ms-3"><i class="fas fa-pen-to-square me-1"></i>Edit</a>
+    </div>
+  </div>
+  <div class="col-auto">
+    <img src="./assets/images/picture-2.webp" class="box-image-event" alt="profile" />
+  </div>
+</div>
+ 
+<div class="d-flex flex-column-reverse flex-lg-row border-bottom border-dark mt-6 gap-4">
+  <div class="col">
+    <h5 class="fs-5 mb-3">Tangihanga</h5>
+    <h3 class="fs-3 mb-4">William Berghan</h3>
+    <div class="d-flex align-items-center mb-4">
+      <h6 class="fs-6"><i class="fas fa-tag me-1"></i>Event</h6>
+      <div class="badge rounded-pill bg-danger ms-2">Reject</div>
+    </div>
+    <div class="row g-3 mb-6">
+      <div class="col-auto">
+        <h5 class="fs-5">$31,840<span class="fs-6 text-secondary ms-1">collected</span></h5>
+      </div>
+      <div class="col">
+        <h5 class="fs-5">10<span class="fs-6 text-secondary ms-1">donations</span></h5>
+      </div>
+    </div>
+    <div class="mb-4">
+      <a role="button" href="myevent-manage.html" class="fw-semibold"
+        ><i class="fas fa-bars-progress me-1"></i>Manage</a
+      >
+      <a role="button" href="edit-event.html" class="fw-semibold ms-3"><i class="fas fa-pen-to-square me-1"></i>Edit</a>
+    </div>
+  </div>
+  <div class="col-auto">
+    <img src="./assets/images/picture-1.webp" class="box-image-event" alt="profile" />
+  </div>
+</div>
+
+      
+<a href="" role="button" class="flex-center fw-semibold mt-7">Show more<i class="fas fa-angle-down ms-2 fs-5"></i></a>
+
+      
+      <!-- No Event Section -->
+      <div class="mt-7 text-center">
+        <img src="./assets/images/image-no-notification.webp" alt="images no event" />
+        <h6 class="fs-6 mt-3">No events created yet</h6>
+        <a href="create-event.html" class="btn btn-dark mt-6">Create an Event now</a>
+      </div>
+    </div>
+    <div class="tab-pane fade" id="draft" role="tabpanel" aria-labelledby="draft-tab">
+      
+<div class="d-flex flex-column-reverse flex-lg-row border-bottom border-dark mt-4 mt-md-6 gap-4">
+  <div class="col">  
+    <p class="mb-6">Last modified 2 hours ago</p>
+    <div class="mb-4">
+      <a role="button" href="edit-event.html" class="fw-semibold"><i class="fas fa-pen-to-square me-1"></i>Edit</a>
+      <a role="button" data-bs-target="#deleteEventModal" data-bs-toggle="modal" class="fw-semibold ms-3"
+        ><i class="fas fa-trash-alt me-1"></i>Delete</a
+      >
+    </div>
+  </div>
+  <div class="col-auto">
+    <!-- <img src="./assets/images/picture-1.webp" class="box-image-event" alt="profile" /> -->
+    <!-- No Image -->
+    <div class="box-image-event no-image">
+      <i class="fas fa-image d-block mb-4 fs-3"></i>
+      <p class="fw-semibold fs-7 fs-md-5">No Image Available</p>
+    </div>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+  <!-- Margin top for mobile view -->
+  <div class="mt-7 mt-md-0"></div>
+</div>
+<!-- Button Create New Event -->
+<div class="fixed-btn">
+  <a href="create-event.html" role="button" class="d-block d-md-none btn btn-dark w-100"><i class="fas fa-plus me-1"></i>Create Event</a>
+</div>
+
+
+<div class="modal fade" id="deleteEventModal" tabindex="-1" aria-labelledby="EventModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header text-start">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p>Are you sure delete <span class="fw-semibold">this event</span>?</p>
+      </div>
+      <div class="modal-footer">
+        <div class="row gx-3 justify-content-end">
+          <div class="col-auto">
+            <a role="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</a>
+          </div>
+          <div class="col-auto">
+            <a href="" id="deleteEventButton" role="button" class="btn btn-dark"> Delete </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+  
+<div class="box-bottom-navigation">
+  <div class="container">
+    <div class="d-flex justify-content-between">
+      <a href="home.html" class="navigation-item">
+        <i class="fas fa-home mb-2 fs-4"></i>
+        <h6 class="h6">Home</h6>
+      </a>
+      <a href="event.html" class="navigation-item">
+        <i class="fas fa-location-dot mb-2 fs-4"></i>
+        <h6 class="h6">Events</h6>
+      </a>
+      <a href="collect.html" class="navigation-item">
+        <i class="fas fa-arrow-right-arrow-left mb-2 fs-4"></i>
+        <h6 class="h6">Collect</h6>
+      </a>
+      <a href="notification.html" class="navigation-item position-relative">
+        <div class="position-absolute start-50 ms-2 top-0 translate-middle bg-primary text-dark rounded-circle icon icon-md fs-7 lh-1">4</div>
+        <i class="fas fa-bell mb-2 fs-4"></i>
+        <h6 class="h6">Alerts</h6>
+      </a>
+    </div>
+  </div>
+</div>
+
+    </main>
+      <script
+  src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.slim.min.js"
+  integrity="sha512-6ORWJX/LrnSjBzwefdNUyLCMTIsGoNP6NftMy2UAm1JBm6PRZCO1d7OHBStWpVFZLO+RerTvqX/Z9mBFfCJZ4A=="
+  crossorigin="anonymous"
+  referrerpolicy="no-referrer"
+></script>
+ 
+<script>
+  $(document).ready(function () {
+  });
+</script>
+
+    <script>
+      $(document).ready(function () {
+        $('.show-password').click(function () {
+          if ($(this).children().hasClass('fa-eye')) {
+            //change icon
+            $(this).children().removeClass('fa-eye').addClass('fa-eye-slash');
+            //change inputt type to text
+            $(this).closest('.position-relative').find('.form-control').attr('type', 'text');
+          } else {
+            //change icon
+            $(this).children().removeClass('fa-eye-slash').addClass('fa-eye');
+            //change inputt type to text
+            $(this).closest('.position-relative').find('.form-control').attr('type', 'password');
+          }
+        });
+      });
+
+      $(document).scroll(function () {
+        let $nav = $('.navbar.fixed-top');
+        $nav.toggleClass('scrolled', $(document).scrollTop() > $nav.height());
+        console.log('scroll position: ', $(document).scrollTop() )
+        console.log('height: ', $nav.height() )
+      });
+      // Example starter JavaScript for disabling form submissions if there are invalid fields
+      (function () {
+        'use strict';
+
+        // Fetch all the forms we want to apply custom Bootstrap validation styles to
+        var forms = document.querySelectorAll('.needs-validation');
+
+        // Loop over them and prevent submission
+        Array.prototype.slice.call(forms).forEach(function (form) {
+          form.addEventListener(
+            'submit',
+            function (event) {
+              if (!form.checkValidity()) {
+                event.preventDefault();
+                event.stopPropagation();
+              }
+
+              form.classList.add('was-validated');
+            },
+            false
+          );
+        });
+      })();
+    </script>
+  </body>
+</html>

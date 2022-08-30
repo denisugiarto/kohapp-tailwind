@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="msapplication-TileColor" content="#ffffff" />
+  <meta name="theme-color" content="#ffffff" />
+  <title>Kohapp Content</title>
+  <link rel="stylesheet" type="text/css" href="./assets/css/style.css" />
+  <!-- Flatpickr Date Picker -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/afe7e62084.js" crossorigin="anonymous"></script>
+  <!-- Trix Text Editor -->
+  <link rel="stylesheet" type="text/css" href="./assets/library/trix/trix.css" />
+  <script type="text/javascript" src="./assets/library/trix/trix.js"></script>
+</head>
+
+  <body>
+    <main class="bd-main vh-100">
+      <div class="bg-skew"></div>
+      
+<div class="container box-content">
+  <h1 class="page-title">Welcome to kohapp</h1>
+  <h5 class="fs-5 mt-5 mb-1">All Roles</h5>
+  <div class="nav flex-column ms-3 gap-1">
+    <a href="signin.html">Sign In</a>
+    <a href="signup.html">Sign Up</a>
+    <a href="recover-password.html">
+      Recover Password
+      <span class="position-relative">
+        <span
+          class="position-absolute top-0 start-0 ms-3 translate-middle p-1 bg-primary4 text-white rounded-circle fs-8"
+        >
+          New
+        </span>
+      </span>
+    </a>
+    <a href="recover-change-password.html">
+      Change Password
+      <span class="position-relative">
+        <span
+          class="position-absolute top-0 start-0 ms-3 translate-middle p-1 bg-primary4 text-white rounded-circle fs-8"
+        >
+          New
+        </span>
+      </span>
+    </a>
+    <a href="home.html">Home</a>
+    <a href="create-event.html">
+      Create Event
+      <span class="position-relative">
+        <span
+          class="position-absolute top-0 start-0 ms-3 translate-middle p-1 bg-primary4 text-white rounded-circle fs-8"
+        >
+          New
+        </span>
+      </span>
+    </a>
+    <a href="start-collection.html">
+      Start Collection
+      <span class="position-relative">
+        <span
+          class="position-absolute top-0 start-0 ms-3 translate-middle p-1 bg-primary4 text-white rounded-circle fs-8"
+        >
+          New
+        </span>
+      </span>
+    </a>
+    <a href="event.html">Event</a>
+    <a href="give-donation.html">Give Donation</a>
+    <a href="koha.html">Koha</a>
+    <a href="event-detail.html">Event Detail</a>
+    <a href="collection-detail.html">Collection Detail</a>
+    <a href="collection-koha.html">Collection Koha</a>
+    <a href="donation-success.html">Donation Success</a>
+    <a href="notification.html"> Notification </a>
+    <a href="myprofile.html"> My Profile </a>
+    <a href="akahu-account.html"> Akahu Account </a>
+    <a href="myevent.html">
+      My Event
+      <span class="position-relative">
+        <span
+          class="position-absolute top-0 start-0 ms-3 translate-middle p-1 bg-primary4 text-white rounded-circle fs-8"
+        >
+          New
+        </span>
+      </span>
+    </a>
+    <a href="collect.html"> Collect </a>
+    <a href="mydonation.html">My Donation</a>
+    <a href="finance.html">
+      Financial Management
+      <span class="position-relative">
+        <span
+          class="position-absolute top-0 start-0 ms-3 translate-middle p-1 bg-primary4 text-white rounded-circle fs-8"
+        >
+          New
+        </span>
+      </span>
+    </a>
+    <a href="withdraw.html">
+      Withdraw
+      <span class="position-relative">
+        <span
+          class="position-absolute top-0 start-0 ms-3 translate-middle p-1 bg-primary4 text-white rounded-circle fs-8"
+        >
+          New
+        </span>
+      </span>
+    </a>
+  </div>
+</div>
+
+    </main>
+      <script
+  src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.slim.min.js"
+  integrity="sha512-6ORWJX/LrnSjBzwefdNUyLCMTIsGoNP6NftMy2UAm1JBm6PRZCO1d7OHBStWpVFZLO+RerTvqX/Z9mBFfCJZ4A=="
+  crossorigin="anonymous"
+  referrerpolicy="no-referrer"
+></script>
+  
+    <script>
+      $('.show-password').click(function () {
+        if ($(this).children().hasClass('fa-eye')) {
+          //change icon
+          $(this).children().removeClass('fa-eye').addClass('fa-eye-slash');
+          //change inputt type to text
+          $(this).closest('.position-relative').find('.form-control').attr('type', 'text');
+        } else {
+          //change icon
+          $(this).children().removeClass('fa-eye-slash').addClass('fa-eye');
+          //change inputt type to text
+          $(this).closest('.position-relative').find('.form-control').attr('type', 'password');
+        }
+      });
+    </script>
+    <script>
+      // Example starter JavaScript for disabling form submissions if there are invalid fields
+      (function () {
+        'use strict';
+
+        // Fetch all the forms we want to apply custom Bootstrap validation styles to
+        var forms = document.querySelectorAll('.needs-validation');
+
+        // Loop over them and prevent submission
+        Array.prototype.slice.call(forms).forEach(function (form) {
+          form.addEventListener(
+            'submit',
+            function (event) {
+              if (!form.checkValidity()) {
+                event.preventDefault();
+                event.stopPropagation();
+              }
+
+              form.classList.add('was-validated');
+            },
+            false
+          );
+        });
+      })();
+    </script>
+  </body>
+</html>

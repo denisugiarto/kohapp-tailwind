@@ -1,0 +1,295 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="msapplication-TileColor" content="#ffffff" />
+  <meta name="theme-color" content="#ffffff" />
+  <title>Financial
+Management Page</title>
+  <link rel="stylesheet" type="text/css" href="./assets/css/style.css" />
+  <!-- Flatpickr Date Picker -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/afe7e62084.js" crossorigin="anonymous"></script>
+  <!-- Trix Text Editor -->
+  <link rel="stylesheet" type="text/css" href="./assets/library/trix/trix.css" />
+  <script type="text/javascript" src="./assets/library/trix/trix.js"></script>
+</head>
+
+  <body>
+    <main class="bd-main vh-100">
+      <div class="bg-skew"></div>
+       
+<nav class="navbar navbar-light border-bottom border-secondary fixed-top">
+  <div class="container gap-3 gap-md-5 gap-xl-6">
+    <a href="home.html" class="fs-3"><i class="fas fa-arrow-left"></i></a>
+    <h1 class="navbar-brand text-center col">Financial Management</h1>
+  </div>
+</nav>
+
+<div class="container box-content">
+  <div class="mt-6">
+<div class="alert alert-success alert-dismissible fade show " role="alert">
+  <i class="fas fa-check-circle me-1"></i>
+  The withdrawal request to your account has been successful
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+</div>
+  <div class="card card-body w-md-75 w-lg-50 mt-3">
+    <h4 class="fs-4">Current Balance</h4>
+    <p class="text-secondary">Available to transfer</p>
+    <h5 class="fs-2 mt-3">$40.00</h5>
+    <a href="withdraw.html" role="button" class="btn btn-dark mt-3">Withdraw</a>
+  </div>
+  <h6 class="fs-4 mt-7">Transaction History</h6>
+  <h6 class="fs-5 mt-6 mb-2">Statement Period</h6>
+  <div class="row align-items-center gx-4 gy-6">
+    <div class="col-9 col-md-7 col-lg-5">
+      <div class="position-relative">
+        <input id="date" type="date" name="date" class="form-control ps-6" placeholder="Select your date" />
+        <div class="position-absolute top-50 start-0 translate-middle ms-3"><i class="fas fa-calendar"></i></div>
+      </div>
+    </div>
+    <div class="col-auto">
+      <a role="button" class=" btn btn-dark p-3"><i class="fas fa-filter"></i></a>
+    </div> 
+    <div class="col-auto ms-0 ms-lg-auto">
+        <a id="download-button" role="button" class="btn btn-outline-dark">Download CSV</a>
+    </div>
+  </div>
+  <!-- Table -->
+  <div class="table-responsive">
+    <table class="table mt-6 table-striped">
+      <thead class="table-dark">
+        <tr>
+          <th scope="col">Date</th>
+          <th scope="col">Type</th>
+          <th scope="col">Description</th>
+          <th scope="col">Amount</th>
+          <th scope="col">Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td scope="row">Aug 19 2022</td>
+          <td>Incoming Donation</td>
+          <td>Incoming donation</td>
+          <td class="text-success">+$1.00</td>
+          <td>Successs</td>
+        </tr>
+        <tr>
+          <td scope="row">Aug 19 2022</td>
+          <td>Withdrawal</td>
+          <td>-</td>
+          <td class="text-danger">-$5.00</td>
+          <td>Successs</td>
+        </tr>
+        <tr>
+          <td scope="row">Aug 19 2022</td>
+          <td>Incoming Donation</td>
+          <td>Incoming donation</td>
+          <td class="text-success">+$1.00</td>
+          <td>Successs</td>
+        </tr>
+        <tr>
+          <td scope="row">Aug 19 2022</td>
+          <td>Incoming Donation</td>
+          <td>Incoming donation</td>
+          <td class="text-success">+$1.00</td>
+          <td>Successs</td>
+        </tr>
+        <tr>
+          <td scope="row">Aug 29 2022</td>
+          <td>Withdrawal</td>
+          <td>-</td>
+          <td class="text-danger">-$5.00</td>
+          <td class="text-danger">Fail</td>
+        </tr>
+        <tr>
+          <td scope="row">Aug 29 2022</td>
+          <td>Incoming Donation</td>
+          <td>Incoming donation</td>
+          <td class="text-success">+$1.00</td>
+          <td>Successs</td>
+        </tr>
+        <tr>
+          <td scope="row">Aug 29 2022</td>
+          <td>Withdrawal</td>
+          <td>-</td>
+          <td class="text-danger">-$5.00</td>
+          <td class="text-danger">Fail</td>
+        </tr>
+        <tr>
+          <td scope="row">Aug 29 2022</td>
+          <td>Incoming Donation</td>
+          <td>Incoming donation</td>
+          <td class="text-success">+$1.00</td>
+          <td>Successs</td>
+        </tr>
+        <tr>
+          <td scope="row">Aug 29 2022</td>
+          <td>Withdrawal</td>
+          <td>-</td>
+          <td class="text-danger">-$5.00</td>
+          <td class="text-danger">Fail</td>
+        </tr>
+        <tr>
+          <td scope="row">Aug 29 2022</td>
+          <td>Incoming Donation</td>
+          <td>Incoming donation</td>
+          <td class="text-success">+$1.00</td>
+          <td>Successs</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <!-- Page Navigation -->
+  <div class="d-flex align-items-center gap-3 mt-2">
+    <p class="fs-7">Total 25 Data</p>
+    <nav aria-label="Page navigation">
+      <ul class="pagination">
+        <li class="page-item">
+          <a class="page-link" href="#"><i class="fas fa-chevron-left"></i></a>
+        </li>
+        <li class="page-item active"><a class="page-link" href="#">1</a></li>
+        <li class="page-item"><a class="page-link" href="#">2</a></li>
+        <li class="page-item"><a class="page-link" href="#">3</a></li>
+        <li class="page-item">
+          <a class="page-link" href="#"><i class="fas fa-chevron-right"></i></a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</div>
+ 
+<div class="box-bottom-navigation">
+  <div class="container">
+    <div class="d-flex justify-content-between">
+      <a href="home.html" class="navigation-item">
+        <i class="fas fa-home mb-2 fs-4"></i>
+        <h6 class="h6">Home</h6>
+      </a>
+      <a href="event.html" class="navigation-item">
+        <i class="fas fa-location-dot mb-2 fs-4"></i>
+        <h6 class="h6">Events</h6>
+      </a>
+      <a href="collect.html" class="navigation-item">
+        <i class="fas fa-arrow-right-arrow-left mb-2 fs-4"></i>
+        <h6 class="h6">Collect</h6>
+      </a>
+      <a href="notification.html" class="navigation-item position-relative">
+        <div class="position-absolute start-50 ms-2 top-0 translate-middle bg-primary text-dark rounded-circle icon icon-md fs-7 lh-1">4</div>
+        <i class="fas fa-bell mb-2 fs-4"></i>
+        <h6 class="h6">Alerts</h6>
+      </a>
+    </div>
+  </div>
+</div>
+
+    </main>
+      <script
+  src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.slim.min.js"
+  integrity="sha512-6ORWJX/LrnSjBzwefdNUyLCMTIsGoNP6NftMy2UAm1JBm6PRZCO1d7OHBStWpVFZLO+RerTvqX/Z9mBFfCJZ4A=="
+  crossorigin="anonymous"
+  referrerpolicy="no-referrer"
+></script>
+ 
+<script>
+  //Table To CSV
+  function htmlToCSV(html, filename) {
+    let data = [];
+    let rows = document.querySelectorAll('table tr');
+
+    for (let i = 0; i < rows.length; i++) {
+      let row = [],
+        cols = rows[i].querySelectorAll('td, th');
+
+      for (let j = 0; j < cols.length; j++) {
+        row.push(cols[j].innerText);
+      }
+      data.push(row.join(','));
+    }
+
+    downloadCSVFile(data.join('\n'), filename);
+  }
+
+  function downloadCSVFile(csv, filename) {
+    var csv_file, download_link;
+
+    csv_file = new Blob([csv], { type: 'text/csv' });
+
+    download_link = document.createElement('a');
+    download_link.download = filename;
+    download_link.href = window.URL.createObjectURL(csv_file);
+    download_link.style.display = 'none';
+    document.body.appendChild(download_link);
+    download_link.click();
+  }
+
+  document.getElementById('download-button').addEventListener('click', function () {
+    var html = document.querySelector('table').outerHTML;
+    htmlToCSV(html, 'transaction_history.csv');
+  });
+
+  $(document).ready(function () {
+    //Select Date Library
+    flatpickr('#date', {
+      mode: 'range',
+      dateFormat: 'd-m-Y',
+    });
+  });
+</script>
+
+    <script>
+      $(document).ready(function () {
+        $('.show-password').click(function () {
+          if ($(this).children().hasClass('fa-eye')) {
+            //change icon
+            $(this).children().removeClass('fa-eye').addClass('fa-eye-slash');
+            //change inputt type to text
+            $(this).closest('.position-relative').find('.form-control').attr('type', 'text');
+          } else {
+            //change icon
+            $(this).children().removeClass('fa-eye-slash').addClass('fa-eye');
+            //change inputt type to text
+            $(this).closest('.position-relative').find('.form-control').attr('type', 'password');
+          }
+        });
+      });
+
+      $(document).scroll(function () {
+        let $nav = $('.navbar.fixed-top');
+        $nav.toggleClass('scrolled', $(document).scrollTop() > $nav.height());
+        console.log('scroll position: ', $(document).scrollTop() )
+        console.log('height: ', $nav.height() )
+      });
+      // Example starter JavaScript for disabling form submissions if there are invalid fields
+      (function () {
+        'use strict';
+
+        // Fetch all the forms we want to apply custom Bootstrap validation styles to
+        var forms = document.querySelectorAll('.needs-validation');
+
+        // Loop over them and prevent submission
+        Array.prototype.slice.call(forms).forEach(function (form) {
+          form.addEventListener(
+            'submit',
+            function (event) {
+              if (!form.checkValidity()) {
+                event.preventDefault();
+                event.stopPropagation();
+              }
+
+              form.classList.add('was-validated');
+            },
+            false
+          );
+        });
+      })();
+    </script>
+  </body>
+</html>
