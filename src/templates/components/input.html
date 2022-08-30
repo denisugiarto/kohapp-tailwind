@@ -1,0 +1,80 @@
+<!-- Input Search -->
+{% macro search(placeholder, value) %}
+<div class="position-relative">
+  <input type="search" name="search" class="form-control ps-7" placeholder="{{placeholder}}" value="{{ value }}" />
+  <div class="position-absolute top-50 start-0 translate-middle ms-5"><i class="fas fa-search"></i></div>
+</div>
+{% endmacro %}
+<!-- Input File Image -->
+{% macro fileImage( name, placeholder ) %}
+<input class="d-none" name="{{ name }}" id="{{ name }}" type="file" accept="image/*" onchange="thumbnail(event)" />
+<label for="{{ name }}" class="btn btn-outline-dark btn-sm">{{ placeholder }}</label>
+{% endmacro %}
+<!-- Input File Video -->
+{% macro fileVideo( name, placeholder ) %}
+<input class="d-none" name="{{ name }}" id="{{ name }}" type="file" accept="video/*" />
+<label for="{{ name }}" class="btn btn-outline-dark btn-sm">{{ placeholder }}</label>
+{% endmacro %}
+
+<!-- Input Text -->
+{% macro text( name, label, placeholder, value ) %}
+<label for="{{ name }}" class="form-label">{{ label }}</label>
+<input
+  name="{{ name }}"
+  class="form-control"
+  type="text"
+  placeholder="Enter {{ placeholder | lower }}"
+  value="{{ value }}"
+  required
+/>
+<div class="invalid-feedback">Type your {{ placeholder | lower }}</div>
+{% endmacro %}
+
+<!-- Input Email -->
+{% macro email( name, label, placeholder, value ) %}
+<label for="{{ name }}" class="form-label">{{ label }}</label>
+<input
+  name="{{ name }}"
+  class="form-control"
+  type="email"
+  placeholder="Enter {{ placeholder | lower }}"
+  value="{{ value }}"
+  required
+/>
+<div class="invalid-feedback">This email address looks wrong</div>
+{% endmacro %}
+
+<!-- Input Password -->
+{% macro password( name, label, placeholder, value ) %}
+<label for="{{ name }}" class="form-label">{{ label }}</label>
+<div class="position-relative">
+  <input
+    name="{{ name }}"
+    class="form-control"
+    type="password"
+    placeholder="Enter {{ placeholder | lower }}"
+    value="{{ value }}"
+    required
+  />
+  <div class="invalid-feedback">Please enter a valid password of at least 6 characters </div>
+  <a role="button" class="show-password position-absolute start-100 top-0 mt-3 ms-n6"><i class="fas fa-eye"></i></a>
+</div>
+{% endmacro %}
+
+<!-- Input Password with desc -->
+{% macro passwordWithDesc( name, label, placeholder, value ) %}
+<label for="{{ name }}" class="form-label">{{ label }}</label>
+<div class="position-relative">
+  <input
+    name="{{ name }}"
+    class="form-control"
+    type="password"
+    placeholder="Enter {{ placeholder | lower }}"
+    value="{{ value }}"
+    required
+  />
+  <p class="mt-1 fs-7">Your password must be at least 6 characters</p>
+  <div class="invalid-feedback">Please enter a valid password of at least 6 characters</div>
+  <a role="button" class="show-password position-absolute start-100 top-0 mt-3 ms-n6"><i class="fas fa-eye"></i></a>
+</div>
+{% endmacro %}

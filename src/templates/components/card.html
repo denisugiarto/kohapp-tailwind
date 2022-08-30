@@ -1,0 +1,291 @@
+<!-- Card Event -->
+{% macro event(name, date, imgUrl) %}
+<div class="d-flex flex-column-reverse flex-lg-row border-bottom border-dark mt-6 pb-3 gap-4">
+  <div class="col">
+    <h5 class="fs-5 mb-3">Tangihanga</h5>
+    <h3 class="fs-3 mb-4">{{ name }}</h3>
+    <h6 class="fs-6 mb-4"><i class="fas fa-tag me-1"></i>Event</h6>
+    <p class="mb-4">Open Donation : {{ date }}</p>
+    <div class="row gy-3 gx-md-4">
+      <div class="col-12 col-md-6 col-lg-auto">
+        <a role="button" href="event-koha.html" class="w-100 btn btn-dark btn-lg">Koha</a>
+      </div>
+      <div class="col-12 col-md-6 col-lg-auto">
+        <a role="button" href="event-detail.html" class="w-100 btn btn-outline-dark btn-lg">Detail</a>
+      </div>
+    </div>
+  </div>
+  <div class="col-auto">
+    <img src="{{ imgUrl }}" class="box-image-event" alt="profile" />
+  </div>
+</div>
+{% endmacro %}
+
+<!-- Card Collection -->
+{% macro collection() %}
+<div class="d-flex flex-column-reverse flex-lg-row border-bottom border-dark pb-3 mt-6 gap-4">
+  <div class="col">
+    <h3 class="collection-title mb-4" title="Wade Warren cheerful smile was snatched away by a leaky">
+      Wade Warren cheerful smile was snatched away by a leaky
+    </h3>
+    <h6 class="fs-6 mb-4"><i class="fas fa-tag me-1"></i>Collection</h6>
+    <h6 class="mb-4">$31,840 <span class="text-secondary fw-normal">collected of $100,000 goal</span></h6>
+    <div class="row gy-3 gx-md-4">
+      <div class="col-12 col-md-6 col-lg-auto">
+        <a role="button" href="collection-koha.html" class="w-100 btn btn-dark btn-lg">Koha</a>
+      </div>
+      <div class="col-12 col-md-6 col-lg-auto">
+        <a role="button" href="collection-detail.html" class="w-100 btn btn-outline-dark btn-lg">Detail</a>
+      </div>
+    </div>
+  </div>
+  <div class="col-auto">
+    <img src="./assets/images/picture-2.webp" class="box-image-event" alt="profile" />
+  </div>
+</div>
+{% endmacro %}
+
+<!-- Card My Event -->
+{% macro myEvent(name, date, imgUrl, status, color) %}
+<div class="d-flex flex-column-reverse flex-lg-row border-bottom border-dark mt-6 gap-4">
+  <div class="col">
+    <h5 class="fs-5 mb-3">Tangihanga</h5>
+    <h3 class="fs-3 mb-4">{{ name }}</h3>
+    <div class="d-flex align-items-center mb-4">
+      <h6 class="fs-6"><i class="fas fa-tag me-1"></i>Event</h6>
+      <div class="badge rounded-pill bg-{{ color }} ms-2">{{ status | capitalize }}</div>
+    </div>
+    <div class="row g-3 mb-6">
+      <div class="col-auto">
+        <h5 class="fs-5">$31,840<span class="fs-6 text-secondary ms-1">collected</span></h5>
+      </div>
+      <div class="col">
+        <h5 class="fs-5">10<span class="fs-6 text-secondary ms-1">donations</span></h5>
+      </div>
+    </div>
+    <div class="mb-4">
+      <a role="button" href="myevent-manage.html" class="fw-semibold"
+        ><i class="fas fa-bars-progress me-1"></i>Manage</a
+      >
+      <a role="button" href="edit-event.html" class="fw-semibold ms-3"><i class="fas fa-pen-to-square me-1"></i>Edit</a>
+    </div>
+  </div>
+  <div class="col-auto">
+    <img src="{{ imgUrl }}" class="box-image-event" alt="profile" />
+  </div>
+</div>
+{% endmacro %}
+
+<!-- Card My Collection -->
+{% macro myCollection(name, imgUrl, status, color) %}
+<div class="d-flex flex-column-reverse flex-lg-row border-bottom pb-3 border-dark mt-6 gap-4">
+  <div class="col">
+    <h3 class="collection-title mb-4">{{ name }}</h3>
+    <div class="d-flex align-items-center mb-4">
+      <h6 class="fs-6"><i class="fas fa-tag me-1"></i>Collection</h6>
+      <div class="badge rounded-pill bg-{{ color }} ms-2">{{ status | capitalize }}</div>
+    </div>
+    <h6 class="mb-4">$31,840 <span class="text-secondary fw-normal">collected of $100,000 goal</span></h6>
+    <div class="mb-4">
+      <a role="button" href="collect-manage.html" class="fw-semibold"
+        ><i class="fas fa-bars-progress me-1"></i>Manage</a
+      >
+      <a role="button" href="edit-collect.html" class="fw-semibold ms-3"
+        ><i class="fas fa-pen-to-square me-1"></i>Edit</a
+      >
+    </div>
+  </div>
+  <div class="col-auto">
+    <img src="{{ imgUrl }}" class="box-image-event" alt="profile" />
+  </div>
+</div>
+{% endmacro %}
+
+<!-- Card Draft My Event -->
+{% macro eventDraft(name, date, imgUrl, status, color) %}
+<div class="d-flex flex-column-reverse flex-lg-row border-bottom border-dark mt-4 mt-md-6 gap-4">
+  <div class="col">  
+    <p class="mb-6">Last modified 2 hours ago</p>
+    <div class="mb-4">
+      <a role="button" href="edit-event.html" class="fw-semibold"><i class="fas fa-pen-to-square me-1"></i>Edit</a>
+      <a role="button" data-bs-target="#deleteEventModal" data-bs-toggle="modal" class="fw-semibold ms-3"
+        ><i class="fas fa-trash-alt me-1"></i>Delete</a
+      >
+    </div>
+  </div>
+  <div class="col-auto">
+    <!-- <img src="{{ imgUrl }}" class="box-image-event" alt="profile" /> -->
+    <!-- No Image -->
+    <div class="box-image-event no-image">
+      <i class="fas fa-image d-block mb-4 fs-3"></i>
+      <p class="fw-semibold fs-7 fs-md-5">No Image Available</p>
+    </div>
+  </div>
+</div>
+{% endmacro %}
+
+<!-- Card Draft Collect -->
+{% macro collectDraft(name, imgUrl, status, color) %}
+<div class="d-flex flex-column-reverse flex-lg-row border-bottom border-dark mt-6 gap-4">
+  <div class="col">
+    <h3 class="collection-title mb-4">{{ name }}</h3>
+    <div class="d-flex align-items-center mb-4">
+      <h6 class="fs-6"><i class="fas fa-tag me-1"></i>Collection</h6>
+      <div class="badge rounded-pill bg-{{ color }} ms-2">{{ status | capitalize }}</div>
+    </div>
+    <p class="mb-6">Last modified 2 hours ago</p>
+    <div class="mb-4">
+      <a role="button" href="edit-collect.html" class="fw-semibold"><i class="fas fa-pen-to-square me-1"></i>Edit</a>
+      <a role="button" data-bs-target="#deleteEventModal" data-bs-toggle="modal" class="fw-semibold ms-3">
+        <i class="fas fa-trash-alt me-1"></i>Delete
+      </a>
+    </div>
+  </div>
+  <div class="col-auto">
+    <img src="{{ imgUrl }}" class="box-image-event" alt="profile" />
+  </div>
+</div>
+{% endmacro %}
+
+<!-- Card Donate Event -->
+{% macro donateEvent(name, donation, date, imgUrl) %}
+<div class="d-flex flex-column-reverse flex-lg-row border-bottom pb-3 border-dark mt-6 gap-4">
+  <div class="col">
+    <h5 class="fs-5 mb-3">Tangihanga</h5>
+    <h3 class="fs-3 mb-4">{{ name }}</h3>
+    <h6 class="fs-6 mb-4"><i class="fas fa-tag me-1"></i>Event</h6>
+    <p class="mb-4 text-secondary">{{ date }}</p>
+    <h6 class="fs-6">${{ donation }}</h6>
+  </div>
+  <div class="col-auto">
+    <img src="{{ imgUrl }}" class="box-image-event" alt="profile" />
+  </div>
+</div>
+{% endmacro %}
+
+<!-- Card Donate Collection -->
+{% macro donateCollection(name, donation, date, imgUrl) %}
+<div class="d-flex flex-column-reverse flex-lg-row border-bottom pb-3 border-dark mt-6 gap-4">
+  <div class="col">
+    <h3 class="collection-title mb-4">{{ name }}</h3>
+    <h6 class="fs-6 mb-4"><i class="fas fa-tag me-1"></i>Collection</h6>
+    <p class="mb-4 text-secondary">{{ date }}</p>
+    <h6 class="fs-6">${{ donation }}</h6>
+  </div>
+  <div class="col-auto">
+    <img src="{{ imgUrl }}" class="box-image-event" alt="profile" />
+  </div>
+</div>
+{% endmacro %}
+
+<!-- Card Message -->
+{% macro message(name, donation) %}
+<div class="row border-bottom pb-3 mt-6 gx-2">
+  <div class="col-auto">
+    <div class="box-avatar-image">{{ name | first }}</div>
+  </div>
+  <div class="col mt-0 mt-md-2 me-md-6">
+    <h4 class="fs-5">{{ name }}</h4>
+    <p class="text-secondary">Give donation ${{ donation }}</p>
+    <p class="fs-6 mt-3">
+      Maringi noa ngā roimata ki a koutou te whānau pani Me tears flow freely for you all at this time.
+    </p>
+  </div>
+  <div class="col-auto">
+    <p class="text-secondary">1 hour ago</p>
+  </div>
+</div>
+{% endmacro %}
+
+<!-- Card Reply Message -->
+{% macro messageReply(name, donation, form, show) %}
+<div class="row border-bottom pb-3 mt-6 gx-2">
+  <div class="col-auto">
+    <div class="box-avatar-image">{{ name | first }}</div>
+  </div>
+  <div class="col">
+    <div class="row gx-2">
+      <div class="col mt-0 mt-md-2 me-md-6">
+        <h4 class="fs-5">{{ name }}</h4>
+        <p class="text-secondary">Give donation ${{ donation }}</p>
+        <p class="fs-6 my-3">
+          Maringi noa ngā roimata ki a koutou te whānau pani Me tears flow freely for you all at this time.
+        </p>
+        <a class="fw-semibold" data-bs-toggle="collapse" data-bs-target=".{{ form }}" role="button">Reply</a>
+      </div>
+      <div class="col-auto">
+        <p class="text-secondary">1 hour ago</p>
+      </div>
+    </div>
+    <div class="collapse fade {{ form }} {{ show }}">
+      <div class="row mt-0 mt-md-2 gy-3 gy-md-0 gx-3 px-2">
+        <input
+          type="text"
+          name="reply-msg"
+          id=""
+          class="col-12 col-md form-control me-3"
+          placeholder="write a thank you note"
+        />
+        <button class="col-auto btn btn-dark">Send</button>
+      </div>
+    </div>
+  </div>
+</div>
+{% endmacro %}
+
+<!-- Card Message with Video -->
+{% macro messageWithVideo(name, donation) %}
+<div class="row border-bottom pb-3 mt-6 gx-2">
+  <div class="col-auto">
+    <div class="box-avatar-image">{{ name | first }}</div>
+  </div>
+  <div class="col mt-0 mt-md-2 me-md-6">
+    <h4 class="fs-5">{{ name }}</h4>
+    <p class="text-secondary">Give donation ${{ donation }}</p>
+    <video src="./assets/videos/sad videos.mp4" class="rounded img-fluid mt-3" controls></video>
+    <p class="fs-6 mt-3">
+      Maringi noa ngā roimata ki a koutou te whānau pani Me tears flow freely for you all at this time.
+    </p>
+  </div>
+  <div class="col-auto">
+    <p class="text-secondary">1 hour ago</p>
+  </div>
+</div>
+{% endmacro %}
+
+<!-- Card Reply Message with Video -->
+{% macro messageReplyWithVideo(name, donation, form) %}
+<div class="row border-bottom pb-3 mt-6 gx-2">
+  <div class="col-auto">
+    <div class="box-avatar-image">{{ name | first }}</div>
+  </div>
+  <div class="col mt-0 mt-md-2 me-md-6">
+    <div class="row gx-2">
+      <div class="col">
+        <h4 class="fs-5">{{ name }}</h4>
+        <p class="text-secondary">Give donation ${{ donation }}</p>
+        <video src="./assets/videos/sad videos.mp4" class="rounded img-fluid mt-3" controls></video>
+        <p class="fs-6 my-3">
+          Maringi noa ngā roimata ki a koutou te whānau pani Me tears flow freely for you all at this time.
+        </p>
+        <a class="fw-semibold" data-bs-toggle="collapse" data-bs-target=".{{ form }}" role="button">Reply</a>
+      </div>
+      <div class="col-auto">
+        <p class="text-secondary">1 hour ago</p>
+      </div>
+    </div>
+    <div class="collapse fade {{ form }}">
+      <div class="row mt-0 mt-md-2 gy-3 gy-md-0 gx-3 px-2">
+        <input
+          type="text"
+          name="reply-msg"
+          id=""
+          class="col-12 col-md form-control me-3"
+          placeholder="write a thank you note"
+        />
+        <button class="col-auto btn btn-dark">Send</button>
+      </div>
+    </div>
+  </div>
+</div>
+{% endmacro %}

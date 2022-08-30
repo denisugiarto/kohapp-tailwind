@@ -1,0 +1,104 @@
+{% macro item() %}
+<div class="notification">
+  <div class="col-auto">
+    <div class="notification-avatar">Z</div>
+  </div>
+  <div class="col me-sm-7">
+    <h5 class="fs-5">Mirjan Prenga<span class="d-inline-block rounded-circle icon-xs bg-primary4 ms-2"></span></h5>
+    <p class="text-secondary mb-3">Give donation 15.00</p>
+    <p class="fs-7">
+      Maringi noa ngā roimata ki a koutou te whānau pani Me tears flow freely for you all at this time.
+    </p>
+  </div>
+  <div class="col-auto text-end">
+    <p class="fs-6 text-secondary">1 hour ago</p>
+    <a role="button" data-bs-toggle="dropdown" aria-expanded="false">
+      <i class="fas fa-ellipsis-h text-xl"></i>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-dark dropdown-menu-end">
+      <li>
+        <a class="dropdown-item" href="#">
+          <div class="d-flex gap-2">
+            <div class="col-auto">
+              <i class="fas fa-check fs-5"></i>
+            </div>
+            <div class="col">
+              <p class="mb-0">Mark as read</p>
+              <p class="fs-7">Mark this notification read</p>
+            </div>
+          </div>
+        </a>
+      </li>
+      <li>
+        <a class="dropdown-item" href="#">
+          <div class="d-flex gap-2">
+            <div class="col-auto">
+              <i class="fas fa-trash-alt fs-6"></i>
+            </div>
+            <div class="col">
+              <p class="mb-0">Delete</p>
+              <p class="fs-7">Remove this notification</p>
+            </div>
+          </div>
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
+{% endmacro %}
+
+{% macro readed() %}
+<div class="notification">
+  <div class="col-auto">
+    <div class="notification-avatar">Z</div>
+  </div>
+  <div class="col me-sm-7 text-secondary">
+    <h5 class="fs-5">Mirjan Prenga</h5>
+    <p class="text-secondary mb-3">Give donation 15.00</p>
+    <p class="fs-7">
+      Maringi noa ngā roimata ki a koutou te whānau pani Me tears flow freely for you all at this time.
+    </p>
+  </div>
+  <div class="col-auto text-end">
+    <p class="fs-6 text-secondary">1 hour ago</p>
+    <a role="button" class="" data-bs-toggle="dropdown" aria-expanded="false">
+      <i class="fas fa-ellipsis-h text-xl"></i>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-dark dropdown-menu-end">
+      <li>
+        <a class="dropdown-item" href="#">
+          <div class="d-flex gap-2">
+            <div class="col-auto">
+              <i class="fas fa-check fs-5"></i>
+            </div>
+            <div class="col">
+              <p class="mb-0">Mark as read</p>
+              <p class="fs-7">Mark this notification read</p>
+            </div>
+          </div>
+        </a>
+      </li>
+      <li>
+        <a class="dropdown-item" href="#">
+          <div class="d-flex gap-2">
+            <div class="col-auto">
+              <i class="fas fa-trash-alt fs-6"></i>
+            </div>
+            <div class="col">
+              <p class="mb-0">Delete</p>
+              <p class="fs-7">Remove this notification</p>
+            </div>
+          </div>
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
+{% endmacro %}
+
+{% macro remove() %}
+<div class="notification align-items-center">
+    <div class="col fs-5">Notification removed</div>
+    <a role="button" class="btn-cancel col-auto fs-6 lh-1"><i class="fas fa-rotate-left me-2"></i>Cancel</a>
+</div>
+{% endmacro %}

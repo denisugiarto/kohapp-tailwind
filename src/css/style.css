@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'Azo Sans';
+  src: url('../font/AzoSans-Regular.eot?#iefix') format('embedded-opentype'),
+    url('../font/AzoSans-Regular.woff2') format('woff2'), url('../font/AzoSans-Regular.woff') format('woff'),
+    url('../font/AzoSans-Regular.ttf') format('truetype');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Azo Sans';
+  src: url('../font/AzoSans-Medium.eot?#iefix') format('embedded-opentype'),
+    url('../font/AzoSans-Medium.woff2') format('woff2'), url('../font/AzoSans-Medium.woff') format('woff'),
+    url('../font/AzoSans-Medium.ttf') format('truetype');
+  font-weight: 500;
+}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  {% include "./head.html" %}
+  <body>
+    <main class="bd-main vh-100">
+      <div class="bg-skew"></div>
+      {% block content %} {% endblock %}
+    </main>
+    {% block modal %} {% endblock %} {% include "./footer.html" %} {% block script %} {% endblock %}
+    <script>
+      $('.show-password').click(function () {
+        if ($(this).children().hasClass('fa-eye')) {
+          //change icon
+          $(this).children().removeClass('fa-eye').addClass('fa-eye-slash');
+          //change inputt type to text
+          $(this).closest('.position-relative').find('.form-control').attr('type', 'text');
+        } else {
+          //change icon
+          $(this).children().removeClass('fa-eye-slash').addClass('fa-eye');
+          //change inputt type to text
+          $(this).closest('.position-relative').find('.form-control').attr('type', 'password');
+        }
+      });
+    </script>
+    <script>
+      // Example starter JavaScript for disabling form submissions if there are invalid fields
+      (function () {
+        'use strict';
+
+        // Fetch all the forms we want to apply custom Bootstrap validation styles to
+        var forms = document.querySelectorAll('.needs-validation');
+
+        // Loop over them and prevent submission
+        Array.prototype.slice.call(forms).forEach(function (form) {
+          form.addEventListener(
+            'submit',
+            function (event) {
+              if (!form.checkValidity()) {
+                event.preventDefault();
+                event.stopPropagation();
+              }
+
+              form.classList.add('was-validated');
+            },
+            false
+          );
+        });
+      })();
+    </script>
+  </body>
+</html>
